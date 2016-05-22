@@ -431,9 +431,9 @@
             <p id="errorMsg" style="display: none; font-size: 18px; color: white; padding: 5px 0 5px 20px; background-color: red;">An error occured, please try again!</p>
             <br>
             <form action="https://www.amxinfinity.tk/mail.php?ml" method="POST">
-            <input class="input-text" type="text" name="" placeholder="Your Name *">
-            <input class="input-text" type="text" name="" placeholder="Your E-mail *">
-            <textarea class="input-text text-area" cols="0" rows="0" placeholder="Your Message *"></textarea>
+            <input class="input-text" type="text" name="name" required placeholder="Your Name *">
+            <input class="input-text" type="text" name="email" required placeholder="Your E-mail *">
+            <textarea class="input-text text-area" cols="0" rows="0" name="message" required placeholder="Your Message *"></textarea>
             <input class="input-btn" type="submit" value="send message">
             </form>
           </div>
