@@ -440,12 +440,12 @@
           </ul>
         </div>
         <div class="col-lg-8 wow fadeInLeft delay-06s">
-          <div class="form" id="ContactForm">
+          <div class="form">
             <p id="successMsg" style="display: none; font-size: 18px; color: white; padding: 5px 0 5px 20px; background-color: green;">Successfully sent the message!</p>
             <p id="errorMsg" style="display: none; font-size: 18px; color: white; padding: 5px 0 5px 20px; background-color: red;">An error occured, please try again!</p>
             <p id="waitMsg" style="display: none; font-size: 18px; color: white; padding: 5px 0 5px 20px; background-color: grey;">Sending the message, please wait!</p>
             <br>
-            <form method="POST">
+            <form method="POST" id="ContactForm">
               <input class="input-text" type="text" name="name" required placeholder="Your Name *">
               <input class="input-text" type="text" name="email" required placeholder="Your E-mail *">
               <textarea class="input-text text-area" cols="1" rows="1" name="message" required placeholder="Your Message *"></textarea>
