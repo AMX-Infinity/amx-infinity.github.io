@@ -138,10 +138,32 @@ document.getElementById('all').onclick = function() {
 };
 
 $(document).ready(function(){
+    /*
     if (window.location.href.indexOf('success') != -1) {
         $('#successMsg').css('display', 'block');
     }
     if (window.location.href.indexOf('error') != -1) {
         $('#errorMsg').css('display', 'block');
     }
+    */
+    var form = $('#ContactForm');
+    form.submit(function(ev) {
+        ev.preventDefault();
+        
+        $('#waitMsg').css('display', 'block');
+        
+        $.ajax({
+        type: form.attr('method'),
+        url: form.attr('action'),
+        data: form.serialize(),
+        success: function(data) {
+            $('#waitMsg').css('display', 'none');
+            if (data=='success') {
+                $('#successMsg').css('display', 'block');
+            } else {
+                $('#errorMsg').css('display', 'block');
+            }
+        }
+        });
+    });
 });
